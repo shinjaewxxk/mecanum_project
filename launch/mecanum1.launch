@@ -1,0 +1,8 @@
+<launch>
+
+<node name="serial_node" pkg="rosserial_python"  type="serial_node.py" args="/dev/adk"/>
+<node name="rc_to_pwm_sbus" pkg="mecanum1" type="rc_to_pwm_sbus" output="screen"/>
+<node pkg="rosbag" type="record" name="record" output="screen" args="-o /home/mrl/catkin_ws/src/mecanum1/bag/ -a"/>
+ 
+</launch>
+
